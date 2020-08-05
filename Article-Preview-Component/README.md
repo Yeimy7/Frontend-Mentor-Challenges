@@ -14,10 +14,10 @@ Your users should be able to:
 - See the social media share links when they click the share icon
 
 # Desktop Version
-![desktop-design](https://raw.githubusercontent.com/yeimy7/Frontend-Mentor-Challenges/Article-Preview-Component/master/images/article-web.png)
+![desktop-design](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/Article-Preview-Component/images/article-web.png)
 
 # Mobile Version
-![mobile-design](https://raw.githubusercontent.com/yeimy7/Frontend-Mentor-Challenges/Article-Preview-Component/master/images/mobile-design.png)
+![mobile-design](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/Article-Preview-Component/images/mobile-design.jpg)
 
 
 # Test the component
