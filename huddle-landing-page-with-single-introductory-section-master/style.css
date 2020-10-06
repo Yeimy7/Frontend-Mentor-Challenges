@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --poppins: 'Poppins', sans-serif;
+    --open:'Open Sans', sans-serif;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--violet);
+    background-image: url('./images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: initial;
+    color: white;
+}
+
+h1{
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: 40px;
+    padding: 16px 0px;   
+}
+p{
+    font-family: var(--open);
+    font-size: 17px;
+}
+.header{
+    padding: 45px 60px;
+}
+.header img{
+    width: 220px;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 45px 70px 0px;
+    letter-spacing: 1px;
+}
+.wrapper_left{
+    width: 55%;
+}
+.wrapper_left img{
+    width: 98%
+}
+.wrapper_right{
+    width: 43%;
+    padding: 30px 0px 30px 30px;
+}
+.button{
+    background-color: white;
+    color: var(--violet);
+    border-style: none;
+    margin: 25px 0px;
+    padding: 20px 65px;
+    border-radius: 30px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.links{
+    width: 100%;
+    padding: 10px 70px;
+    display: flex;
+    justify-content:flex-end;
+}
+.links a{
+    color: white;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width:375px){
+    body{
+        background-image: url('./images/bg-mobile.svg');
+    }
+    .header{
+        padding: 35px 30px;
+    }
+    .header img{
+        width: 130px;
+    }
+    .wrapper{
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+    .wrapper_left, .wrapper_right{
+        width: 100%;
+        padding: 0;
+    }
+    h1{
+        font-size: 23px;
+        padding: 20px 0px;   
+    }
+    .wrapper_right{
+        padding-top: 30px;
+        text-align: center;
+    }
+    p{
+        letter-spacing: normal;
+    }
+    .button{
+        padding: 0;
+        margin: 25px 0px;
+        width: 210px;
+        height: 50px;
+        border-radius: 30px;
+        font-size: 15px;
+        box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+    }
+    .links{
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+    .links a{
+        font-size: 15px;
+        width: 30px;
+        height: 31px;
+        line-height: 30px;
+        margin: 5px;
+       
+    }
+}
