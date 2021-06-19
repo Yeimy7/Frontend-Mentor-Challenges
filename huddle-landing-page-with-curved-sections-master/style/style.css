@@ -74,7 +74,7 @@ body {
 
 .landing__description {
     margin: auto;
-    padding: 15px 320px;
+    width: 600px;
 }
 
 .button-started {
@@ -155,15 +155,21 @@ body {
 }
 
 .section {
+    height: 95px;
+    position: relative;
     width: 100%;
+    line-height: 0;
 }
 
 .section img {
+    position: absolute;
+    bottom: -2px;
     display: block;
     width: 100%;
 }
 
 .footer__content {
+    height: auto;
     width: 100%;
     display: flex;
     padding: 140px 80px;
@@ -276,6 +282,7 @@ body {
     .landing__description {
         margin: auto;
         padding: 20px;
+        width: auto;
     }
     .button-started {
         padding: 15px 50px;
@@ -295,9 +302,6 @@ body {
         margin-bottom: 100px;
     }
     .wrapper {
-        /* display: flex;
-        justify-content: space-around;
-        align-items: center; */
         flex-direction: column;
     }
     
@@ -340,7 +344,11 @@ body {
     .contact{
         width: 100%;
     }
+    .section {
+        height: auto;
+    }
     .section img {
+        position: relative;
         display: block;
     }
  }
