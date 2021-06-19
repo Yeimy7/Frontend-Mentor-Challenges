@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --lightPink: hsl(321, 100%, 78%);
+    --lightRed: hsl(0, 100%, 63%);
+    --veryDarkCyan: hsl(192, 100%, 9%);
+    --veryPaleBlue: hsl(207, 100%, 98%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: var(--veryDarkCyan);
+}
+
+button {
+    border-style: none;
+    cursor: pointer;
+    color: var(--veryPaleBlue);
+    font-weight: 600;
+    transition: all .3s;
+    font-size: 16px;
+    background-color: var(--pink);
+    font-family: 'Open Sans', sans-serif;
+}
+button:hover{
+    background-color: var(--lightPink);
+
+}
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+}
+
+.header {
+    padding: 80px 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__button {
+    background-color: white;
+    padding: 8px 27px;
+    border: 2px solid var(--pink);
+    color: var(--pink);
+    border-radius: 22px;
+    text-transform: capitalize;
+}
+.header__button:hover{
+    background-color: white;
+    border: 2px solid var(--lightPink);
+    color: var(--lightPink);
+
+}
+
+.landing {
+    padding: 150px 50px 100px;
+    text-align: center;
+}
+
+.landing__title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.landing__description {
+    margin: auto;
+    padding: 15px 320px;
+}
+
+.button-started {
+    padding: 25px 100px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    box-shadow: 0 8px 10px hsla(192, 100%, 9%, 0.233); 
+}
+
+.wrapper-image {
+    position: relative;
+    width: 100vw;
+    padding: 0 180px;
+    height: auto;
+    text-align: center;
+}
+.wrapper-image__image{
+    width: 100%;
+}
+
+.statistics {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0 120px;
+}
+
+.card-data {
+    width: 300px;
+    position: relative;
+}
+
+.card-data__icon {
+    padding: 20px 0 0;
+}
+
+.card-data__quantity {
+    position: relative;
+    display: block;
+    padding: 0 0 10px;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.card-data__info {
+    font-size: 23px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper-color{
+    background-color: var(--veryPaleBlue);
+}
+.wrapper-center{
+    padding: 100px 0px;
+}
+
+.card-image, .card-text {
+    width: 50%;
+    padding: 90px;
+}
+
+.card-image__image {
+    width: 100%;
+}
+
+.card-text__description {
+    font-size: 16px;
+}
+
+.started {
+    text-align: center;
+    padding: 180px 0px ;
+}
+
+.section {
+    width: 100%;
+}
+
+.section img {
+    display: block;
+    width: 100%;
+}
+
+.footer__content {
+    width: 100%;
+    display: flex;
+    padding: 140px 80px;
+    justify-content: space-between;
+    color: var(--veryPaleBlue);
+    background-color: var(--veryDarkCyan);
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.contact {
+    width: 28%;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.contact__description {
+    margin-bottom: 20px;
+}
+
+.contact__info {
+    display: inline-block;
+    padding: 0 0 20px 20px;
+}
+
+.list {
+    margin-top: 50px;
+}
+
+.list-social {
+    padding: 0 20px 0 0;
+    display: inline-block;
+}
+
+.icon-social {
+    width: 30px;
+    fill: white;
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(1.5, 1.5);
+}
+.icon-social:hover{
+    fill:aqua;
+}
+
+.form {
+    width: 45%;
+}
+
+.form__title {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.form__description {
+    padding: 0 180px 30px 0;
+}
+
+.form__email {
+    border-style: none;
+    width: 330px;
+    height: 50px;
+    border-radius: 7px;
+    outline: none;
+    padding: 20px;
+}
+
+.form__button {
+    border-radius: 7px;
+    padding: 14px 50px;
+    margin-left: 30px;
+}
+.form__alert{
+    color: var(--lightRed);
+    margin-top: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+ @media screen and (max-width:375px) {
+     body{
+         font-size: 14px;
+     }
+    .header {
+        width: 100vw;
+        padding:20px;
+    }
+    .header__logo{
+        width: 100px;
+        height: 20px;
+    }
+    .header__button {
+        padding: 2px 15px;
+        font-size: 14px;
+       
+    }
+    .landing {
+        padding: 20px;
+    }
+    
+    .landing__title {
+        margin-top: 100px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    .landing__description {
+        margin: auto;
+        padding: 20px;
+    }
+    .button-started {
+        padding: 15px 50px;
+        border-radius: 25px;
+        font-size: 15px;
+    }
+    .wrapper-image {
+      padding: 70px 20px;
+    }
+    .statistics {
+        flex-direction: column;        
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+    .card-data{
+        margin-bottom: 100px;
+    }
+    .wrapper {
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center; */
+        flex-direction: column;
+    }
+    
+    .card-image, .card-text {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .wrapper-color{
+        flex-direction: column-reverse;
+    }
+    .card-text__title{
+        font-size: 25px;
+    }
+    .started__title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .footer__content {
+        padding: 50px 20px;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .form {
+        width: 100%;
+        margin: 70px 0;
+    }
+    .form__description {
+        padding: 5px;
+    }
+    
+    .form__email {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .form__button {
+        margin-left: 48%;
+    }
+    .contact{
+        width: 100%;
+    }
+    .section img {
+        display: block;
+    }
+ }
