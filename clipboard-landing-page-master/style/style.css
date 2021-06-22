@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --strongCyan: hsl(171, 66%, 44%);
+    --lightBlue: hsl(233, 100%, 69%);
+    --darkGrayishBlue: hsl(210, 10%, 33%);
+    --grayishBlue: hsl(201, 11%, 66%);
+    --white: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--darkGrayishBlue);
+}
+
+p {
+    color: var(--grayishBlue);
+    line-height: 1.5em;
+    margin: 1.5em auto;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bottom {
+    background-image: url('../images/bg-header-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    padding: 0 1.5em;
+}
+
+.hero-grid {
+    padding: 4em .3em;
+}
+
+.hero-grid img {
+    margin: 6em auto 3em;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+.button {
+    border: none;
+    width: 100%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 3em;
+    color: var(--white);
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button-cyan {
+    background-color: var(--strongCyan);
+    box-shadow: 0px 4px 2px hsl(171, 66%, 34%);
+}
+.button-cyan:hover {
+    background-color: hsla(171, 66%, 44%, 0.8);
+}
+.button-blue {
+    background-color: var(--lightBlue);
+    box-shadow: 0px 4px 1px hsl(233, 58%, 57%);
+}
+
+.button-blue:hover {
+    background-color: hsla(233, 100%, 69%, 0.822);
+}
+
+.grid-keep {
+    padding: 0 .5em;
+}
+
+.grid-details {
+    margin: 2em auto;
+}
+
+.grid-details img {
+    margin: 2em auto;
+    width: 100%;
+}
+
+.clipboard {
+    margin: 8em auto 4em;
+}
+
+.grid-clipboard img {
+    width: 100%;
+    margin: 2em auto 4em;
+}
+
+.features {
+    margin-bottom: 3em;
+}
+
+.feature-item img {
+    margin: 2em auto;
+}
+
+.logos {
+    margin: 2em auto;
+}
+
+.grid-logos {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-logos img {
+    width: 140px;
+    margin: 2em auto;
+}
+
+.footer {
+    background-color: #F5F6F8;
+    padding: 3em 0;
+}
+
+.logo {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.footer-grid ul a {
+    color: var(--darkGrayishBlue);
+    display: block;
+    padding: 1em 0;
+}
+.footer-grid ul a:hover{
+    color: var(--strongCyan);
+}
+.social a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 1em 1.3em;
+}
+.social svg{
+    fill: var(--darkGrayishBlue);
+}
+.social svg:hover{
+    fill: var(--strongCyan);
+}
+@media screen and (min-width: 1023px) {
+    h2{
+        font-size: 1.6em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    .bottom {
+        background-image: url('../images/bg-header-desktop.png');
+        background-size: 100% 60%;
+        background-position: top left;
+    }
+    .hero-grid {
+        width: 600px;
+        margin: 0px auto;
+    }
+    .button {
+        display: inline-block;
+        width: 13em;
+        margin-left: 1em;
+        padding: .8em 1em;
+    }
+    .grid-keep {
+        width: 640px;
+        margin: 0px auto;
+    }
+    .grid-details {
+        display: flex;
+        align-items: center;
+    }
+    .grid-details img {
+        margin: 2em 2em 0 -3em;
+        width: 720px;
+    }
+    .detail {
+        text-align: left;
+        margin-left: 4em;
+        width: 350px;
+    }
+    .clipboard {
+        margin: 4em;
+    }
+    .grid-clipboard {
+        text-align: center;
+        width: 620px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .grid-clipboard img{
+        display: inline-block;
+        margin-left: -5em;
+        width: 800px;
+        
+    }
+    .grid-features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .feature-item {
+        margin: 0 1em;
+        width: 350px;
+    }
+    .grid-logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .grid-logos{
+        padding: 1em 4em;
+        margin: 0 auto;
+    }
+    .grid-logos img{
+        width: auto;
+    }
+    .footer-grid {
+        padding: 1em 8em;
+        text-align: left;
+        display: grid;
+        grid-column-gap: 1em;
+        grid-template-columns: 200px 1fr 1fr 1.5fr 1fr;
+      }
+      .footer-grid ul a {
+        padding: .5em 0;
+    }
+      .social a{
+        margin: 0px .5em;
+        
+      }
+      .social{
+          text-align: right;
+      }
+    
+}
