@@ -37,20 +37,21 @@
     margin: 0 auto;
 }
 
-
 h1 {
     color: var(--veryDarkBlue);
     margin-bottom: .2em;
     font-size: 1.7em;
 }
 
- h3{
+h3 {
     color: var(--veryDarkBlue);
 }
-span{
+
+span {
     font-weight: 700;
 }
-.header{
+
+.header {
     height: 17em;
     width: 100%;
     position: absolute;
@@ -68,7 +69,6 @@ span{
 
 .header-grid span {
     display: inline-block;
- 
 }
 
 .header-button {
@@ -100,7 +100,8 @@ span{
     right: 0;
     bottom: 0;
     border-radius: 34px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    background-color: var(--toggleLight);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -110,7 +111,7 @@ span{
     content: "";
     height: 1.2em;
     width: 1.2em;
-    left: 4px;
+    right: 4px;
     border-radius: 50%;
     bottom: 4px;
     background-color: white;
@@ -119,6 +120,10 @@ span{
 }
 
 input:checked+.slider {
+    background-image: var(--toggleDark);
+}
+
+input:hover+.slider {
     background-color: #2196F3;
 }
 
@@ -127,24 +132,57 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px);
+    background-color: var(--darkDesaturatedBlue);
 }
-.followers{
+
+.followers {
     position: relative;
     text-align: center;
     margin-top: 11.5em;
 }
+
 .card {
     width: 100%;
     border-radius: 5px;
     background-color: var(--lightGrayishBlue);
     margin: 1.5em auto;
-    position: relative;
     padding: 1.5em;
+    transition: all .2s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
 
+.card:hover {
+    cursor: pointer;
+    background-color: hsl(233, 12%, 87%);
+}
 
+.card__line {
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    top: 0;
+    left: 0;
+}
+
+.card-facebook {
+    background-color: var(--facebook);
+}
+
+.card-twitter {
+    background-color: var(--twitter);
+}
+
+.card-instagram {
+    background-image: var(--instagram);
+}
+
+.card-youtube {
+    background-color: var(--youTube);
 }
 
 .followers h3 {
@@ -169,7 +207,6 @@ input:checked+.slider:before {
     margin-right: .5em;
 }
 
-
 .facebook-icon::before, .facebook-icon::after {
     background-image: url('../images/icon-facebook.svg');
 }
@@ -184,26 +221,6 @@ input:checked+.slider:before {
 
 .youtube-icon::before, .youtube-icon::after {
     background-image: url('../images/icon-youtube.svg');
-}
-
-.facebook {
-    border-top: 5px solid var(--facebook);
-}
-
-.twitter {
-    border-top: 5px solid var(--twitter);
-}
-
-.instagram {
-    border-top: double 5px transparent;
-    /* first gradient is for card background, second for border background */
-    background-image: linear-gradient(var(--lightGrayishBlue), var(--lightGrayishBlue)), var(--instagram);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-}
-
-.youtube {
-    border-top: 5px solid var(--youTube);
 }
 
 .today::before, .percent::before {
@@ -237,69 +254,101 @@ input:checked+.slider:before {
 .down {
     color: var(--brightRed);
 }
-.views{
+
+.views {
     display: block;
     height: 20px;
     position: relative;
-
 }
+
 .views::after {
     margin-right: 0em;
     position: absolute;
     top: 0;
     right: 0;
 }
-.overview{
+
+.overview {
     margin-bottom: 2em;
 }
-.overview h3{
+
+.overview h3 {
     display: inline-block;
     font-size: 2em;
     margin-top: .8em;
 }
 
-.percent{
+.percent {
     display: inline-block;
     position: absolute;
     bottom: 1.5em;
     right: 1.5em;
 }
+
 .percent::before {
     margin-right: -.1em;
 }
-.dark-background{
+
+.dark-background {
     background-color: var(--veryDarkBlueBG);
     color: var(--white);
 }
-.dark-insta{
-    background-image: linear-gradient(var(--darkDesaturatedBlue), var(--darkDesaturatedBlue)), var(--instagram);
-}
-.dark-card{
+
+.dark-card {
     background-color: var(--darkDesaturatedBlue);
+    cursor: pointer;
 }
-.dark-top{
+
+.dark-card:hover {
+    background-color: #333A56;
+}
+
+.dark-top {
     background-color: var(--veryDarkBlueTop);
 }
-.color-title{
+
+.color-title {
     color: var(--white);
 }
-.color-text{
+
+.color-text {
     color: var(--desaturatedBlue);
 }
-@media screen and (min-width:375px) {
-    h1{
+
+
+@media screen and (min-width:426px) {
+    .wrapper {
+        max-width: 1000px;
+    }
+    .follower-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2em;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+    }
+    .overview-grid {
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0em 2em;
+    }
+
+}
+@media screen and (min-width:769px) {
+    h1 {
         font-size: 2em;
     }
-    h2{
+    h2 {
         font-size: 1.8em;
     }
-    .wrapper{
+    .wrapper {
         max-width: 1150px;
     }
-    .header{
+    .header {
         border-radius: 0;
     }
-    .header-grid{
+    .header-grid {
         display: flex;
         justify-content: space-between;
         margin-top: 1em;
@@ -307,30 +356,30 @@ input:checked+.slider:before {
     .header-top {
         border-bottom: none;
     }
-    .header-button{
+    .header-button {
         margin-top: 3em;
     }
-    .header-button > span{
+    .header-button>span {
         margin-right: 1em;
         margin-top: .3em;
     }
-    .followers{
-         margin-top: 8em; 
+    .followers {
+        margin-top: 8em;
     }
-    .follower-grid{
+    .follower-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         column-gap: 2em;
         padding-bottom: 1em;
         margin-bottom: 1em;
     }
-    .overview-grid{
+    .overview-grid {
         padding-top: 1em;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap:0em 2em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0em 2em;
     }
-    .card{
-        margin-bottom:.5em;
+    .card {
+        margin-bottom: .5em;
     }
 }

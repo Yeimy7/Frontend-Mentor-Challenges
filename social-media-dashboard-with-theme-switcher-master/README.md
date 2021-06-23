@@ -1,6 +1,6 @@
 # Frontend Mentor - Social media dashboard with theme switcher solution
 
-This is a solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Overview
 
@@ -17,19 +17,22 @@ Users should be able to:
 # Desktop Version
 
 ## Dark
+
 ![desktop-design-dark](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/social-media-dashboard-with-theme-switcher-master/images/desktop-dark.jpg)
 
 ## Light
+
 ![desktop-design-light](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/social-media-dashboard-with-theme-switcher-master/images/desktop-light.jpg)
 
 # Mobile Version
 
 ## Dark
+
 ![mobile-design-dark](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/social-media-dashboard-with-theme-switcher-master/images/mobile-dark.jpg)
 
 ## Light
-![mobile-design-light](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/social-media-dashboard-with-theme-switcher-master/images/mobile-light.jpg)
 
+![mobile-design-light](https://raw.githubusercontent.com/Yeimy7/Frontend-Mentor-Challenges/master/social-media-dashboard-with-theme-switcher-master/images/mobile-light.jpg)
 
 ### Links
 
@@ -45,3 +48,28 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
+
+### What I learned
+
+```html
+<div class="card">
+  <span class="card__line card-instagram"></span>
+  <span class="user instagram-icon"> @realnathanf </span>
+</div>
+```
+
+```css
+:root{
+    --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.card__line {
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  top: 0;
+  left: 0;
+}
+.card-instagram {
+    background-image: var(--instagram);
+}
+```
