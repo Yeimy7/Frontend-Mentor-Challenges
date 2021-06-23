@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="wrapper">
+        <div class="header-grid">
+          <div class="header-top">
+            <h1>Social Media Dashboard</h1>
+            <span> Total Followers: 23,004 </span>
+          </div>
+          <div class="header-button">
+            <span> Dark Mode </span>
+
+            <label class="switch">
+              <input type="checkbox" name="switch" id="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="followers">
+      <div class="wrapper">
+        <div class="follower-grid">
+          <div class="card facebook">
+            <span class="user facebook-icon"> @nathanf </span>
+            <h3>1987</h3>
+            <p>Followers</p>
+            <span class="today up"> 12 Today </span>
+          </div>
+          <div class="card twitter">
+            <span class="user twitter-icon"> @nathanf </span>
+            <h3>1044</h3>
+            <p>Followers</p>
+            <span class="today up"> 99 Today </span>
+          </div>
+          <div class="card instagram">
+            <span class="user instagram-icon"> @realnathanf </span>
+            <h3>11k</h3>
+            <p>Followers</p>
+            <span class="today up"> 1099 Today </span>
+          </div>
+          <div class="card youtube">
+            <span class="user youtube-icon"> Nathan F. </span>
+            <h3>8239</h3>
+            <p>Subscribers</p>
+            <span class="today down"> 144 Today </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="wrapper">
+        <h2>Overview - Today</h2>
+        <div class="overview-grid">
+          <div class="card">
+            <span class="views facebook-icon"> Page Views </span>
+            <h3>87</h3>
+            <span class="percent up"> 3% </span>
+          </div>
+          <div class="card">
+            <span class="views facebook-icon"> Likes </span>
+            <h3>52</h3>
+            <span class="percent down"> 2% </span>
+          </div>
+          <div class="card">
+            <span class="views instagram-icon"> Likes </span>
+            <h3>5462</h3>
+            <span class="percent up"> 2257% </span>
+          </div>
+          <div class="card">
+            <span class="views instagram-icon"> Profile Views </span>
+            <h3>52k</h3>
+            <span class="percent up"> 1375% </span>
+          </div>
+          <div class="card">
+            <span class="views twitter-icon"> Retweets </span>
+            <h3>117</h3>
+            <span class="percent up"> 303% </span>
+          </div>
+          <div class="card">
+            <span class="views twitter-icon"> Likes </span>
+            <h3>507</h3>
+            <span class="percent up"> 553% </span>
+          </div>
+          <div class="card">
+            <span class="views youtube-icon"> Likes </span>
+            <h3>107</h3>
+            <span class="percent down"> 19% </span>
+          </div>
+          <div class="card">
+            <span class="views youtube-icon"> Total Views </span>
+            <h3>1407</h3>
+            <span class="percent down"> 12% </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script>
+      const check = document.getElementById("checkbox");
+      const body = document.querySelector("body");
+      const cards = document.querySelectorAll(".card");
+      const header = document.getElementById("header");
+      const title = document.querySelectorAll("h1, h2, h3");
+      const text = document.querySelectorAll("span, p");
+
+      check.addEventListener("change", (e) => {
+        body.classList.toggle("dark-background");
+        header.classList.toggle("dark-top");
+        cards.forEach((element, i) => {
+          if (i === 2) {
+            element.classList.toggle("dark-insta");
+          } else {
+            element.classList.toggle("dark-card");
+          }
+        });
+        title.forEach((element) => {
+          element.classList.toggle("color-title");
+        });
+        text.forEach((element) => {
+          element.classList.toggle("color-text");
+        });
+      });
+    </script>
+  </body>
+</html>
