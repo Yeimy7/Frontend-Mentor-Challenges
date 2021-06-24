@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --moderateViolet: hsl(263, 55%, 52%);
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(0, 0%, 81%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+body {
+    background-color: var(--lightGrayishBlue);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-grid {
+    padding: 3em 2em;
+}
+
+.card {
+    padding: 2em 2.6em;
+    border-radius: .8em;
+    margin-bottom: 1.8em;
+}
+
+.card-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.card-detail img {
+    width: 35px;
+    height: 35px;
+    margin-right: 1.3em;
+    border-radius: 50%;
+}
+
+.card-detail small {
+    font-weight: 400;
+    margin-top: 3px;
+    display: block;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 1em auto;
+    opacity: 70%;
+}
+
+small {
+    opacity: 50%;
+}
+.dan {
+    grid-area: dan;
+    position: relative;
+    background-color: var(--moderateViolet);
+    z-index: -1;
+}
+
+.jona {
+    grid-area: jona;
+    background-color: var(--veryDarkGrayishBlue);
+}
+
+.kira {
+    grid-area: kira;
+}
+
+.jan {
+    grid-area: jan;
+}
+
+.pat {
+    grid-area: pat;
+    background-color: var(--veryDarkBlackishBlue);
+}
+.image-profile-violet {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+.image-profile-gray {
+    border: 2px solid hsla(0, 0%, 81%, 0.4);
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--veryDarkGrayishBlue);
+}
+
+.dan span {
+    position: absolute;
+    top: 0;
+    right: 1.8em;
+    z-index: -1;
+}
+
+.light {
+    color: var(--lightGray);
+}
+
+.light h2 {
+    color: var(--lightGrayishBlue);
+}
+
+@media screen and (min-width:767px) {
+    .container-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'dan dan jona ' 'jan pat pat' 'kira kira kira';
+        gap: 2em;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:1160px) {
+    .container-grid {
+        width: 1150px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'dan dan jona kira ' 'jan pat pat kira';
+        gap: 2em;
+        margin: 0 auto;
+    }
+    .violet span {
+        right:6.6em;
+    }
+    .card {
+        margin: 0;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
