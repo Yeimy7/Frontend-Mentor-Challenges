@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="logo">
+        <img src="./images/logo.svg" alt="logo" />
+      </header>
+      <section class="hero"></section>
+
+      <section class="coming">
+        <h1>
+          <span> We're </span>
+          coming soon
+        </h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <div class="form">
+          <input
+            class="input"
+            type="email"
+            placeholder="Email Address"
+            id="email"
+            autocomplete="off"
+          />
+          <img src="/images/icon-error.svg" alt="error" id="error" />
+          <button class="button" id="button"></button>
+          <small id="msg-error">Please provide a valid email</small>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </p>
+      </footer>
+    </div>
+    <script>
+      const button = document.getElementById("button");
+      const email = document.getElementById("email");
+      const error = document.getElementById("error");
+      const msgError = document.getElementById("msg-error");
+
+      button.addEventListener("click", () => {
+        const expRegex =
+          /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (!expRegex.test(email.value)) {
+          error.style.display = "inline-block";
+          msgError.style.display = "block";
+          email.style.border = "1px solid hsl(0, 93%, 68%)";
+          button.style.backgroundImage =
+            "url('/images/icon-arrow.svg'), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))";
+        }
+      });
+        email.addEventListener("focus", () => {
+        error.style.display = "none";
+        msgError.style.display = "none";
+        email.style.border = "1px solid hsl(0, 36%, 70%)";
+        button.style.backgroundImage =
+          "url('/images/icon-arrow.svg'), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))";
+      });
+    </script>
+  </body>
+</html>

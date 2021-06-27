@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayishRed: hsl(0, 6%, 24%);
+    --linearA: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --linearB: linear-gradient( 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'logo' 'hero' 'coming' 'footer';
+}
+
+.logo {
+    grid-area: logo;
+    padding: 2em;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.hero {
+    grid-area: hero;
+    width: 100%;
+    height: 250px;
+    background-image: url('../images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.coming {
+    grid-area: coming;
+    text-align: center;
+    padding: 4em 1em;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--darkGrayishRed);
+    letter-spacing: 6px;
+}
+
+h1 span {
+    font-weight: 300;
+    color: var(--desaturatedRed);
+}
+
+ p {
+    color: var(--desaturatedRed);
+    line-height: 1.5em;
+    padding: 1.5em 0;
+}
+
+.input {
+    display: inline-block;
+    position: relative;
+    border-style: none;
+    height: 3.5em;
+    width: 80%;
+    padding: 1em 2em;
+    border: 1px solid var(--desaturatedRed);
+    border-radius: 1.5em;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--desaturatedRed);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.form{
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    right: 2em;
+    border-style: none;
+    background-image: url('../images/icon-arrow.svg'), var(--linearB);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 6em;
+    height: 3.5em;
+    border-radius: 1.6em;
+    transition: all .3s;
+    cursor: pointer;
+}
+.button:hover{
+    background-image: url('../images/icon-arrow.svg'), var(--linearA);
+}
+#error {
+    position: absolute;
+    right: 110px;
+    top: 11px;
+    width: 20px;
+    display: none;
+}
+
+#msg-error {
+    position: relative;
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 5px 0px;
+    color: var(--softRed);
+    display: none;
+}
+.footer{
+    grid-area: footer;
+}
+@media screen and (min-width:760px) {
+    .hero{
+        background-position: top;
+        height: 400px;
+    }
+    .button{
+        right: 5em;
+    }
+    #error{
+        right: 160px;
+    }
+}
+@media screen and (min-width:1023px) {
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 450px;
+        grid-template-areas: 'logo hero' 'coming hero' 'footer hero';
+    }
+    .hero {
+        height: 100%;
+        background-image: url('../images/hero-desktop.jpg');
+    }
+    .logo{
+        padding: 4em 5em 4em;
+    }
+    .logo img{
+        width: 150px;
+    }
+    h1{
+        font-size: 3.5em;
+        letter-spacing: 10px;
+    }
+    .coming{
+        width: 100%;
+        padding: 5em;
+        text-align: left;
+    }
+   
+}
+@media screen and (min-width:1300px) {
+    .container {
+        max-width: 1440px;
+        max-height: 800px;
+    }
+    .logo{
+        padding: 4em 10em 4em;
+    }
+    .coming{
+        width: 84%;
+        padding: 0 10em;
+    }
+    .button{
+        width: 6em;
+    } 
+    
+}
