@@ -79,24 +79,37 @@
         </p>
         <div class="buttons">
           <button class="button" id="back">Back this project</button>
-          <div class="button-save">
-            <div class="button-save__icon"></div>
+          <div class="button-saved">
+            <svg
+              class="button-save__icon"
+              width="56"
+              height="56"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
             <span class="button-save__sentence"> Bookmark </span>
+
           </div>
         </div>
       </section>
       <section class="main__card">
-        <div class="card__info">
-          <h2>$89,914</h2>
-          <p>of $100,000 backed</p>
-        </div>
-        <div class="card__info">
-          <h2>5,007</h2>
-          <p>total backers</p>
-        </div>
-        <div class="card__info">
-          <h2>56</h2>
-          <p>days left</p>
+        <div class="cards-info">
+          <div class="card__info">
+            <h2>$89,914</h2>
+            <p>of $100,000 backed</p>
+          </div>
+          <div class="card__info">
+            <h2>5,007</h2>
+            <p>total backers</p>
+          </div>
+          <div class="card__info">
+            <h2>56</h2>
+            <p>days left</p>
+          </div>
         </div>
         <div class="progress-container">
           <div class="progress"></div>
@@ -116,56 +129,73 @@
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
-        <div class="main__card card-left">
-          <h4>Bamboo Stand</h4>
-          <span> Pledge $25 or more </span>
+        <div class="main__card card-left sub-card">
+          <div class="title-card">
+            <h4>Bamboo Stand</h4>
+            <span> Pledge $25 or more </span>
+          </div>
           <p>
             You get an ergonomic stand made of natural bamboo. You've helped us
             launch our promotional campaign, and you&#8217;ll be added to a
             special Backer member list.
           </p>
-          <div class="card__data">
-            <h2>101</h2>
-            <small> left </small>
+          <div class="title-card">
+            <div class="card__data">
+              <h2>101</h2>
+              <small> left </small>
+            </div>
+            <button class="button" id="btn-bamboo">Select Reward</button>
           </div>
-          <button class="button" id="btn-bamboo">Select Reward</button>
         </div>
-        <div class="main__card card-left">
-          <h4>Black Edition Stand</h4>
-          <span> Pledge $75 or more </span>
+        <div class="main__card card-left sub-card">
+          <div class="title-card">
+            <h4>Black Edition Stand</h4>
+            <span> Pledge $75 or more </span>
+          </div>
           <p>
             You get a Black Special Edition computer stand and a personal thank
             you. You&#8217;ll be added to our Backer member list. Shipping is
             included.
           </p>
-          <div class="card__data">
-            <h2>64</h2>
-            <small> left </small>
+          <div class="title-card">
+            <div class="card__data">
+              <h2>64</h2>
+              <small> left </small>
+            </div>
+            <button class="button" id="btn-black">Select Reward</button>
           </div>
-          <button class="button" id="btn-black">Select Reward</button>
         </div>
-        <div class="main__card card-left card__out">
-          <h4>Mahogany Special Edition</h4>
-          <span> Pledge $200 or more </span>
+        <div class="main__card card-left card__out sub-card">
+          <div class="title-card">
+            <h4>Mahogany Special Edition</h4>
+            <span> Pledge $200 or more </span>
+          </div>
+
           <p>
             You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
             personal thank you. You&#8217;ll be added to our Backer member list.
             Shipping is included.
           </p>
-          <div class="card__data">
-            <h2>0</h2>
-            <small> left </small>
+          <div class="title-card">
+            <div class="card__data">
+              <h2>0</h2>
+              <small> left </small>
+            </div>
+            <button class="button button-gray">Out of Stock</button>
           </div>
-          <button class="button button-gray">Out of Stock</button>
         </div>
       </section>
     </main>
-<!--  *************************** BIG MODAL **********************-->
+    <!--  *************************** BIG MODAL **********************-->
     <div class="modal-big">
       <div class="main__card card-left">
         <div class="top-modal">
           <h4>Back this project</h4>
-          <img src="./images/icon-close-modal.svg" alt="icon-close-modal" id="close-modal">
+          <img
+            src="./images/icon-close-modal.svg"
+            alt="icon-close-modal"
+            id="close-modal"
+          />
         </div>
         <p>
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
@@ -174,8 +204,7 @@
         <div class="main__card card-left cardBig">
           <div class="card-title">
             <span class="radio-button">
-              <span class="radio-ball">
-              </span>
+              <span class="radio-ball"> </span>
             </span>
             <h4>Pledge with no reward</h4>
           </div>
@@ -194,8 +223,7 @@
         <div class="main__card card-left cardBig">
           <div class="card-title">
             <span class="radio-button">
-              <span class="radio-ball">
-              </span>
+              <span class="radio-ball"> </span>
             </span>
             <h4>Bamboo Stand</h4>
           </div>
@@ -214,7 +242,13 @@
             <div class="inputs">
               <div class="input-number">
                 $
-                <input type="number" name="bamboo" id="bamboo" value="25" min="25"  />
+                <input
+                  type="number"
+                  name="bamboo"
+                  id="bamboo"
+                  value="25"
+                  min="25"
+                />
               </div>
               <button class="button continue">Continue</button>
             </div>
@@ -224,8 +258,7 @@
         <div class="main__card card-left cardBig">
           <div class="card-title">
             <span class="radio-button">
-              <span class="radio-ball">
-              </span>
+              <span class="radio-ball"> </span>
             </span>
             <h4>Black Edition Stand</h4>
           </div>
@@ -244,18 +277,23 @@
             <div class="inputs">
               <div class="input-number">
                 $
-                <input type="number" name="black" id="black" value="75" min="75"  />
+                <input
+                  type="number"
+                  name="black"
+                  id="black"
+                  value="75"
+                  min="75"
+                />
               </div>
               <button class="button continue">Continue</button>
             </div>
           </div>
         </div>
 
-        <div class="main__card card-left card__out">
+        <div class="main__card card-left card__out sub-card">
           <div class="card-title">
             <span class="radio-button">
-              <span class="radio-ball">
-              </span>
+              <span class="radio-ball"> </span>
             </span>
             <h4>Mahogany Special Edition</h4>
           </div>
@@ -273,17 +311,25 @@
       </div>
     </div>
 
-      <div class="modal" id="message">
-        <div class="main__card fixed">
-          <img src="./images/icon-check.svg" alt="icon-check">
-          <h4>Thanks for your support!</h4>
-          <p>
-            Your pledge brings us one step closer to sharing Mastercraft Bamboo
-            Monitor Riser worldwide. You will get an email once our campaign is
-            completed.
-          </p>
-          <button class="button" id="goIt"> Got it! </button>
-        </div>
+    <div class="modal" id="message">
+      <div class="main__card fixed">
+        <img src="./images/icon-check.svg" alt="icon-check" />
+        <h4>Thanks for your support!</h4>
+        <p>
+          Your pledge brings us one step closer to sharing Mastercraft Bamboo
+          Monitor Riser worldwide. You will get an email once our campaign is
+          completed.
+        </p>
+        <button class="button" id="goIt">Got it!</button>
       </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://twitter.com/Yeimy_Briela" target="_blank">&lt;y &gt;eim&lt;/y&gt;</a>.
+      </p>
+    </footer>
   </body>
 </html>

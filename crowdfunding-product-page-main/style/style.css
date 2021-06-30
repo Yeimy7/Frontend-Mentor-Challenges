@@ -12,9 +12,11 @@
     font-size: 16px;
     font-family: 'Commissioner', sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     position: relative;
     height: auto;
@@ -30,7 +32,6 @@ a {
 
 .header {
     position: relative;
-    border: 1px solid red;
 }
 
 .header-grid {
@@ -69,7 +70,7 @@ a {
 }
 
 .menu, .modal, .modal-big {
-    height: 100%;
+    height: 102%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -78,10 +79,12 @@ a {
     background-color: hsla(0, 0%, 0%, 0.623);
     display: none;
 }
-.menu{
+
+.menu {
     z-index: 3;
 }
-.modal, .modal-big{
+
+.modal, .modal-big {
     z-index: 5;
 }
 
@@ -107,7 +110,6 @@ a {
 
 .main {
     position: relative;
-    border: 1px solid blue;
     margin: -5.5em 0;
     padding: 1.5em;
     display: flex;
@@ -135,7 +137,6 @@ a {
 
 h1 {
     margin: 1em 0;
-    /* font-size: 1.3em; */
 }
 
 p {
@@ -170,12 +171,17 @@ p {
 .button-save__icon {
     width: 3.5em;
     height: 3.5em;
-    background-image: url('../images/icon-bookmark.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-size: cover; */
+    cursor: pointer;
+    z-index: 2;
 }
 
+.circle {
+    fill: var(--darkCyan);
+}
+
+.path {
+    fill: #FFFFFF;
+}
 .button-save__sentence {
     display: none;
 }
@@ -221,67 +227,79 @@ h3 {
     padding: 1em 1.3em;
 }
 
-.card-left>span{
+.title-card span {
     display: block;
     color: var(--moderateCyan);
     padding: .5em 0;
     font-size: .9em;
 }
+
 .card-left p {
     padding: 1em 0;
 }
 
-.card-left small{
+.card-left small {
     font-weight: 400;
     color: var(--darkGray);
     font-size: 1em;
     margin: 0 0 .5em 0.5em;
 }
-.card-left .button{
+
+.card-left .button {
     padding: .9em 2em;
     font-size: .9em;
     margin-top: 1.2em;
 }
-.card__data{
+
+.card__data {
     height: 3em;
     width: 8em;
     display: flex;
     align-items: center;
-
 }
-.card__out{
+
+.card__out {
     opacity: .6;
 }
-.button-gray{
+
+.button-gray {
     background-color: var(--darkGray);
 }
-.modal .main__card{
+
+.modal .main__card {
     width: 86%;
     margin: 3em 7%;
 }
-.modal-big{
+
+.modal-big {
     padding-top: 5em;
 }
-.modal-big>.main__card{
+
+.modal-big>.main__card {
     padding: 2em;
     margin: 2em 5%;
-    width:90%;
+    width: 90%;
 }
-.modal-big .main__card>span{
+
+.modal-big .main__card>span {
     margin-left: 2.8em;
 }
-.top-modal{
+
+.top-modal {
     display: flex;
     justify-content: space-between;
 }
-.top-modal img{
+
+.top-modal img {
     cursor: pointer;
 }
-.card-title{
+
+.card-title {
     display: flex;
     align-items: center;
 }
- .radio-button{
+
+.radio-button {
     width: 1.5em;
     height: 1.5em;
     margin-right: 1em;
@@ -290,7 +308,8 @@ h3 {
     display: inline-block;
     cursor: pointer;
 }
-.radio-ball{
+
+.radio-ball {
     display: none;
     margin: 0 auto;
     margin-top: 25%;
@@ -300,22 +319,24 @@ h3 {
     background-color: var(--moderateCyan);
 }
 
-.card__inputs{
+.card__inputs {
     padding: 1em 0;
     border-top: 1px solid #d1d1d1;
     text-align: center;
     display: none;
 }
-.inputs .button{
+
+.inputs .button {
     margin: 0;
 }
-.inputs{
+
+.inputs {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-.input-number{
+
+.input-number {
     width: 6em;
     height: 3em;
     border: 2px solid #c1c1c1;
@@ -326,37 +347,147 @@ h3 {
     align-items: center;
     color: var(--darkGray);
 }
-input[type='number']{
+
+input[type='number'] {
     width: 2em;
     height: 1.5em;
     font-weight: 700;
     border-style: none;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.modal img{
+.modal img {
     margin-bottom: 1em;
 }
-.modal p{
+
+.modal p {
     margin: 2em 0;
 }
-.modal .button{
+
+.modal .button {
     padding: 1em 2em;
     font-size: .8em;
 }
-.border{
+
+.border {
     border: 1px solid hsl(176, 50%, 47%);
 }
-
-.fixed{
+.modal-big span{
+    color: var(--moderateCyan);
+    margin-left: 5px;
+}
+.fixed {
     position: fixed;
 }
 
 .display {
     display: block;
+}
+footer{
+    margin-top: 3em;
+    z-index: 2;
+}
+@media screen and (min-width:1023px){
+    .header-grid {
+        background-image: linear-gradient(rgba(26, 25, 25, 0.644), rgba(29, 29, 29, 0.157), rgba(8, 8, 8, 0.007)), url('../images/image-hero-desktop.jpg');
+        padding: 2em 7em;
+        height: 370px;
+    }
+    .header__icon {
+        display: none;
+    }
+    .list {
+        display: block;
+    }
+    .list li {
+        display: inline-block;
+        padding-left: 1.2em;
+    }
+    .list a {
+        color: white;
+        font-size: .9em;
+    }
+    .main {
+        margin-top: -6.5em;
+    }
+    .main__card {
+        width: 75%;
+    }
+    .title-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cards-info {
+        text-align: left;
+    }
+    .main__card {
+        padding: 3em;
+    }
+    .sub-card, .cardBig {
+        width: 100%;
+    }
+    .card__info {
+        display: inline-block;
+        width: 11em;
+        padding: 0;
+    }
+    .card__info:nth-child(2) {
+        width: 11em;
+        margin: 0em 2em 2em 0;
+        padding-left: 2em;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid #e1e1e1;
+        border-right: 1px solid #e1e1e1;
+    }
+    .modal-big>.main__card {
+        padding: 3em;
+        margin: 2em auto;
+        width: 75%;
+    }
+    
+    .modal .main__card{
+        width: 40%;
+        margin: 5em 30%;
+    }
+    
+}
 
+@media screen and (min-width:1200px) {
+    .main__card {
+        width: 56%;
+    }
+    .modal-big>.main__card {
+        padding: 3em;
+        margin: 2em auto;
+        width: 56%;
+    }
+    .sub-card, .cardBig {
+        width: 100%;
+    }
+    .button-save__sentence{
+        display: inline-block;
+        margin-left:-1em;
+        /* width: 6em; */
+        padding: 1.05em 2em;
+        z-index: 1;
+        border-radius: 0 1.3em 1.3em 0;
+        background-color: #e1e1e1;
+        font-weight: 700;
+        color: var(--darkGray);
+
+    }
+    .green{
+        color: var(--darkCyan);
+        
+    }
+    .button-saved{
+        display: flex;
+        align-items: center;
+    }
 }
