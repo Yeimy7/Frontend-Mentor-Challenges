@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "SpartanA";
+    src: url('../Spartan/static/Spartan-Medium.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: "SpartanB";
+    src: url('../Spartan/static/Spartan-SemiBold.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: "SpartanC";
+    src: url('../Spartan/static/Spartan-Bold.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --darkGray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --veryDarkGray: hsl(0, 0%, 27%);
+    font-size: 12px;
+    font-family: 'SpartanA', sans-serif;
+}
+.container{
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 29% 29.2% 11% 1fr;
+    grid-template-rows: 57% 10% 1fr;
+    grid-template-areas:"hero hero shop shop"
+                        "hero hero nextBack ."
+                        "table about about chair";
+    gap:0px;   
+}
+.image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.hero{
+    grid-area: hero;
+    background-image: url('../images/desktop-image-hero-1.jpg');
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.hero a{
+    color: var(--white);
+    text-transform: lowercase;
+}
+.hero a:hover::before{
+    content: '';
+    width: 25px;
+    border-bottom: 3px solid var(--white);
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+}
+li{
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+.header{
+    margin: 1rem 2.4rem;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.shop{
+    grid-area: shop;
+    background-color: white;
+    padding: 2rem 5rem 0 7rem;
+    align-self: center;
+}
+[data-shop="2"], [data-shop="3"]{
+    display: none;
+}
+h1{
+    font-family: 'SpartanB';
+    font-size: 3.2rem;
+}
+p{
+    color: var(--darkGray);
+    line-height: 1.7rem;
+    margin: 1.5rem 3rem 1.5rem 0 ;
+}
+.shop p{
+    margin-bottom: 3rem;
+}
+.arrow{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    letter-spacing: .8rem;
+    font-family: 'SpartanB';
+}
+.arrow:hover svg, .arrow svg:hover, .arrow:hover{
+    color: var(--darkGray);
+    fill: var(--darkGray);
+}
+.arrow svg{
+    fill:#000;
+}
+
+.nextBack{
+    grid-area: nextBack;
+    display: flex;
+}
+.table{
+    grid-area: table;
+    background-color: black;
+    background-image: url('../images/image-about-dark.jpg');
+}
+.about{
+    grid-area: about;
+    background-color: white;
+    padding: 2rem 0 0 3rem;
+    align-self: center;
+
+}
+h2{
+    text-transform: uppercase;
+    font-family: 'SpartanC';
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+.chair{
+    grid-area: chair;
+    background-image: url('../images/image-about-light.jpg');
+}
+
+.button{
+    background-color: var(--black);
+    width: 50%;
+    height: 100%;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: var(--veryDarkGray);
+}
+#back, #backb{
+    background-image: url('../images/icon-angle-left.svg');
+}
+#next, #nextb{
+    background-image: url('../images/icon-angle-right.svg');
+}
+.hamburger{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.buttons{
+    display: none;
+}
+@media screen and (max-width:425px) {
+    .container{
+        height: 100%;
+        grid-template-columns: 100vw;
+        grid-template-rows: 45% 50% 30% 35% 30%;
+        grid-template-areas:"hero "
+                            "shop "
+                            "table "
+                            "about "
+                            "chair ";
+        gap:0px;   
+    }
+    .hero{
+        position: relative;
+        background-image: url('../images/mobile-image-hero-1.jpg');
+    }
+    .hero ul{
+        display: none;
+    }
+    .header{
+        display: flex;
+        position: relative;
+        width: 40%;
+    }
+    .shop{ 
+        padding: 100px 40px ;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    .shop p{
+        margin: 1rem 0 3rem 0 ;
+    }
+    .hamburger{
+        display: inline-block;
+        margin: 0px 120px 0px 35px;
+    }
+    .list{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .list a{
+        color: var(--black);
+        font-family: 'SpartanC';
+        text-transform: lowercase;
+    }
+    .list img{
+        margin-right: 50px;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: hsla(0, 0%, 0%, 0.623);
+        z-index: 5;
+        /* display: none; */
+    }
+
+    .nextBack{
+       display: none;
+    }
+    .buttons{
+        width: 120px;
+        height: 60px;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
