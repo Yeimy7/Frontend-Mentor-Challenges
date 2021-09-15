@@ -59,10 +59,10 @@ window.addEventListener('load', () => {
 
     function changeHero(i) {
         if (document.body.scrollWidth <= 375) {
-            hero.style.backgroundImage = `url(../images/mobile-image-hero-${i + 1}.jpg)`;
+            hero.style.backgroundImage = `url("./images/mobile-image-hero-${i + 1}.jpg")`;
 
         } else {
-            hero.style.backgroundImage = `url(../images/desktop-image-hero-${i + 1}.jpg)`;
+            hero.style.backgroundImage = `url("./images/desktop-image-hero-${i + 1}.jpg")`;
         }
     }
 
