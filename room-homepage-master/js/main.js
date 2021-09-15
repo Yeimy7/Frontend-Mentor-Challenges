@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     let list = document.querySelectorAll('.list li a');
     const hero = document.getElementById('home');
 
-    changeHero(0);
+    // changeHero(0);
 
     list.forEach(e => {
         e.addEventListener('click', () => {
