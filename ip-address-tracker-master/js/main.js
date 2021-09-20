@@ -1,4 +1,4 @@
-'use strict'
+﻿'use strict'
 window.addEventListener('load', () => {
 
     const btn = document.getElementById('button');
@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
             .catch(err => console.error("ERROR: ", err.message));
     }
     var greenIcon = L.icon({
-        iconUrl: '../images/icon-location.svg',
+        iconUrl: './images/icon-location.svg',
         iconSize: [50, 50],
         iconAnchor: [12, 80],
     });
