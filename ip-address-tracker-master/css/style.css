@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "RubicA";
+    src: url('../Rubik/static/Rubik-Regular.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: "RubicB";
+    src: url('../Rubik/static/Rubik-Medium.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: "RubicC";
+    src: url('../Rubik/static/Rubik-Bold.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --veryDarkGray: hsl(0, 0%, 17%);
+    --darkGray: hsl(0, 0%, 59%);
+    font-size: 18px;
+    font-family: 'RubicA', sans-serif;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 1.5rem 0;
+    color: white;
+    font-family: 'RubicC', sans-serif;
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.search-input {
+    width: 450px;
+    height: 50px;
+    border-style: none;
+    border-radius: 10px;
+    padding: 20px;
+    outline: none;
+    color: var(--darkGray);
+    font-family: 'RubicB', sans-serif;
+    cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: var(--darkGray);
+}
+
+.search-button {
+    display: inline-block;
+    background-color: black;
+    background-image: url('../images/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 55px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.dates {
+    position: absolute;
+    display: flex;
+    width: 70vw;
+    height: 21vh;
+    bottom: -10.5vh;
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px;
+    gap: 20px;
+    z-index: 3;
+}
+
+.card {
+    width: 25%;
+    border-right: 2px solid hsla(0, 0%, 87%, 0.904);
+}
+
+.card:nth-last-child(1) {
+    border: none;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: var(--veryDarkGray);
+}
+
+.card-title {
+    text-transform: uppercase;
+    color: var(--darkGray);
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'RubicC', sans-serif;
+}
+
+.map {
+    width: 100%;
+    height: 65vh;
+}
+
+.mapid {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+@media screen and (max-width:1024px) {
+    .card-text {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: .7rem;
+    }
+    .dates {
+        height: 18vh;
+        bottom: -9vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card-text {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: .7rem;
+    }
+    .dates {
+        height: 32vh;
+        bottom: -18vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .card {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-family: 'RubicA';
+    }
+    .search-input {
+        width: 260px;
+        height: 50px;
+    }
+    .dates {
+        height: 32vh;
+        bottom: -15vh;
+    }
+    .search-input::placeholder {
+       font-size: .5rem;
+    }
+}
