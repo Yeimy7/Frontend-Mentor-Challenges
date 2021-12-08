@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://yeimy7.github.io/Frontend-Mentor-Challenges/space-tourism-website-main/)
+- Live Site URL: https://yeimy7.github.io/Frontend-Mentor-Challenges/space-tourism-website-main/
 
 ## My process
 
