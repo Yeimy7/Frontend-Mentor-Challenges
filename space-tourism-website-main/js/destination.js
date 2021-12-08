@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
 
     function searchData(i) {
         // fetch('http://localhost:5500/starter-code/db/data.json')
-        fetch('https://yeimy7.github.io/space-tourism-website-main/db/data.json')
+        fetch('https://yeimy7.github.io/Frontend-Mentor-Challenges/space-tourism-website-main/db/data.json')
             .then(response => response.json())
             .then(data => {
                 destination.name = data.destinations[i].name;

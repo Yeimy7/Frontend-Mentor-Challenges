@@ -1,6 +1,7 @@
 @import url('./header.css');
 
 body {
+    overflow: hidden;
     background-color: #0B0E17;
     background-image: url('../assets/crew/background-crew-desktop.jpg');
 }
@@ -12,7 +13,7 @@ body {
 .crew-grid {
     display: grid;
     grid-template-areas: 'header picture''info picture';
-    margin: 1rem 0 0;
+    margin: 0;
 }
 
 .crew__header {
@@ -25,13 +26,14 @@ body {
     align-self: flex-end;
     margin-top: 4rem;
 }
-
+.crew__picture img {
+    width: 400px;
+}
 .crew__container {
     grid-area: info;
     width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 #picture, #title, #desc, #subtitle {
